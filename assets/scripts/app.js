@@ -12,8 +12,8 @@ class Product {
     }
 }
 
-const productList = {
-    products: [
+class ProductList {
+    products = [
         new Product(
             'A Pillow', 
             'http://tiny.cc/en48vz', 
@@ -26,8 +26,8 @@ const productList = {
             'We Buid To Your Design',
             89.99
         )
-    ],
-
+    ];
+    constructor() {}
     render() {
         const renderHook = document.getElementById('app');
         const prodList = document.createElement('ul');
@@ -50,6 +50,8 @@ const productList = {
         }
         renderHook.append(prodList);
     }
-};
+}
 
+
+const productList = new ProductList
 productList.render()
